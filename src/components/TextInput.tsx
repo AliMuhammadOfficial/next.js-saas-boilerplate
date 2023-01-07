@@ -12,6 +12,7 @@ interface TextInputProps {
   error?: string;
   fullWidth?: boolean;
   type?: string;
+  placeholder?: string;
   [key: string]: any;
 }
 
@@ -23,6 +24,7 @@ const TextInput: React.FC<TextInputProps> = ({
   error,
   fullWidth,
   type,
+  placeholder,
   ...props
 }) => {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -37,6 +39,7 @@ const TextInput: React.FC<TextInputProps> = ({
     <input
       ref={inputRef}
       type={type}
+      placeholder={placeholder}
       value={value}
       onChange={onChange}
       disabled={disabled}
@@ -55,6 +58,7 @@ TextInput.propTypes = {
   error: PropTypes.string,
   fullWidth: PropTypes.bool,
   type: PropTypes.string,
+  placeholder: PropTypes.string,
 };
 
 TextInput.defaultProps = {
@@ -63,6 +67,7 @@ TextInput.defaultProps = {
   error: '',
   fullWidth: false,
   type: 'text',
+  placeholder: '',
 };
 
 export default TextInput;

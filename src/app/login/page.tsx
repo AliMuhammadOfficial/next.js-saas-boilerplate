@@ -11,7 +11,7 @@ export default function Login() {
           <h1 className="mt-5 font-sans text-xl font-bold text-white md:text-4xl lg:text-5xl">
             Don&apos;t wait
           </h1>
-          <p className="mt-1 text-white">
+          <p className="mt-2 text-white">
             Effortlessly track and manage your expenses, and take control of
             your financial future with our solution.
           </p>
@@ -28,29 +28,37 @@ export default function Login() {
               </p>
             </div>
             <div className="mt-5 flex items-center px-2 text-center">
-              <div className="h-[1px] w-1/3 bg-black "></div>
-              <span className="ml-2 w-1/3 text-sm ">Or Continue with</span>
-              <div className="h-[1px] w-1/3 bg-black "></div>
+              <div className="h-[1px] w-2/5 bg-black "></div>
+              <span className="ml-2 w-1/5 text-sm ">Or</span>
+              <div className="h-[1px] w-2/5 bg-black "></div>
             </div>
             <div className="mt-5 ">
-              <TextInput />
+              <TextInput placeholder="Email Address" type="email" />
             </div>
             <div className="mt-5 ">
-              <TextInput />
+              <TextInput placeholder="Password" type="password" />
             </div>
             <div className="flex justify-center py-2 text-center">
-              <Link href="/password-recovery">
-                <a>
-                  <p className="cursor-pointer text-sm font-bold">
-                    Forget Password ?
-                  </p>
-                </a>
+              <Link
+                href="/password-recovery"
+                className="cursor-pointer text-sm font-bold"
+              >
+                Forget Password ?
               </Link>
             </div>
-            <div className="px-2">
+            <div className="mt-5">
               <Button type="submit" variant="primary" fullWidth>
                 Login
               </Button>
+            </div>
+            <div className="flex justify-center py-2 text-center text-sm">
+              <span>Don&apos;t have an account? </span>
+              <Link
+                href="/register"
+                className="cursor-pointer text-sm font-bold"
+              >
+                &nbsp;Register
+              </Link>
             </div>
           </form>
         </div>
