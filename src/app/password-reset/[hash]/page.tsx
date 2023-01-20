@@ -1,9 +1,39 @@
+import Link from 'next/link';
+
+import Button from '../../../components/Button';
+import TextInput from '../../../components/TextInput';
+
 export default function PasswordReset({ params }) {
   // eslint-disable-next-line no-console
   console.log(params);
   return (
-    <main className="flex h-screen flex-col items-center justify-center">
-      <h1 className="text-3xl font-bold">Password Reset Page</h1>
+    <main className="flex items-center justify-center border-transparent">
+      <div className="my-12 flex items-center justify-center rounded-2xl border-transparent bg-white py-12 shadow-xl md:w-1/2 md:py-24">
+        <div className="w-4/5">
+          <form className="bg-white">
+            <h1 className="mb-2 px-2 text-4xl font-bold">
+              Create New Password.
+            </h1>
+            <div className="mt-5 ">
+              <TextInput placeholder="New Password" type="password" />
+            </div>
+            <div className="mt-5 ">
+              <TextInput placeholder="Confirm Password" type="password" />
+            </div>
+            <div className="mt-5">
+              <Button type="submit" variant="primary" fullWidth>
+                Reset Password
+              </Button>
+            </div>
+            <div className="flex justify-center py-2 text-center text-sm">
+              <span>Back to </span>
+              <Link href="/login" className="cursor-pointer text-sm font-bold">
+                &nbsp;Login
+              </Link>
+            </div>
+          </form>
+        </div>
+      </div>
     </main>
   );
 }
