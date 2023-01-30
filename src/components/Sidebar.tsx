@@ -12,6 +12,7 @@ const Sidebar = () => {
   const handleToggle = () => {
     setIsOpen((prevOpen) => !prevOpen);
   };
+
   return (
     <div>
       <button className="" onClick={handleToggle}>
