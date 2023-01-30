@@ -1,8 +1,5 @@
 import Link from 'next/link';
 
-import Button from '../../../components/Button';
-import TextInput from '../../../components/TextInput';
-
 export default function PasswordReset({ params }) {
   // eslint-disable-next-line no-console
   console.log(params);
@@ -15,15 +12,13 @@ export default function PasswordReset({ params }) {
               Create New Password.
             </h1>
             <div className="mt-5 ">
-              <TextInput placeholder="New Password" type="password" />
+              <input placeholder="New Password" type="password" />
             </div>
             <div className="mt-5 ">
-              <TextInput placeholder="Confirm Password" type="password" />
+              <input placeholder="Confirm Password" type="password" />
             </div>
             <div className="mt-5">
-              <Button type="submit" variant="primary" fullWidth>
-                Reset Password
-              </Button>
+              <button type="submit">Reset Password</button>
             </div>
             <div className="flex justify-center py-2 text-center text-sm">
               <span>Back to </span>

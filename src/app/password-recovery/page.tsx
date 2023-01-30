@@ -1,8 +1,5 @@
 import Link from 'next/link';
 
-import Button from '../../components/Button';
-import TextInput from '../../components/TextInput';
-
 export default function PasswordRecovery() {
   return (
     <main className="border-transparent md:flex">
@@ -15,7 +12,7 @@ export default function PasswordRecovery() {
             We have very easy process for account recovery just enter your email
             to get password reset link.
           </p>
-          <Button type="submit">Read More</Button>
+          <button type="submit">Read More</button>
         </div>
       </div>
       <div className="flex h-screen items-center justify-center rounded-r-3xl border-transparent bg-white shadow-xl md:w-1/2">
@@ -30,12 +27,10 @@ export default function PasswordRecovery() {
               </p>
             </div>
             <div className="mt-5 ">
-              <TextInput placeholder="Email Address" type="email" />
+              <input placeholder="Email Address" type="email" />
             </div>
             <div className="mt-5">
-              <Button type="submit" variant="primary" fullWidth>
-                Get Reset Link
-              </Button>
+              <button type="submit">Get Reset Link</button>
             </div>
             <div className="flex justify-center py-2 text-center text-sm">
               <span>Back to </span>
