@@ -7,7 +7,6 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   // useCallback(() => setIsOpen((prevOpen) => !prevOpen), []);
   const handleToggle = () => {
     setIsOpen((prevOpen) => !prevOpen);

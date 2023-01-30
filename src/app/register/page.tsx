@@ -42,9 +42,7 @@ export default function Register() {
               <input placeholder="Password" type="password" />
             </div>
             <div className="mt-5">
-              <button type="submit" variant="primary" fullWidth>
-                Register
-              </button>
+              <button type="submit">Register</button>
             </div>
             <div className="flex justify-center py-2 text-center text-sm">
               <span>Already&apos;t have an account? </span>

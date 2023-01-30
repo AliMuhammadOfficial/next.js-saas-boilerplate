@@ -1,8 +1,15 @@
-import Link from 'next/link';
+'use client';
 
-export default function PasswordReset({ params }) {
-  // eslint-disable-next-line no-console
-  console.log(params);
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
+
+export default function PasswordReset({ params }: any) {
+  const [hash, setHash] = useState('');
+  useEffect(() => {
+    setHash(params.hash);
+    return () => {};
+  }, [params.hash]);
+
   return (
     <main className="flex items-center justify-center border-transparent">
       <div className="my-12 flex items-center justify-center rounded-2xl border-transparent bg-white py-12 shadow-xl md:w-1/2 md:py-24">
@@ -13,6 +20,7 @@ export default function PasswordReset({ params }) {
             </h1>
             <div className="mt-5 ">
               <input placeholder="New Password" type="password" />
+              <input type="hidden" value={hash} />
             </div>
             <div className="mt-5 ">
               <input placeholder="Confirm Password" type="password" />
